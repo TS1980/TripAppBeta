@@ -1,0 +1,22 @@
+﻿<Window x:Class="TripApp.View.CountryInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"       
+        xmlns:local="clr-namespace:TripApp.ViewModel"
+        mc:Ignorable="d"
+        Title="CountryInfoView" Height="500" Width="700">
+    
+    <Grid>
+        <StackPanel>
+            <Grid Background="#4286f4" Height="80" VerticalAlignment="Top">
+                <TextBlock Background="#4286f4" VerticalAlignment="Top" FontSize="50" Height="80">Country Name</TextBlock>
+            </Grid>
+            <TextBlock FontSize="25" Margin="10">Cyrrency :</TextBlock>
+            <TextBlock FontSize="25" Margin="10" Text="{Binding , UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock FontSize="25" Margin="10">Cyrrency Symbol:</TextBlock>
+            <TextBlock FontSize="25" Margin="10" Text="{Binding currency_symbol}"/>
+            <TextBlock FontSize="25" Margin="10">Info :</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
